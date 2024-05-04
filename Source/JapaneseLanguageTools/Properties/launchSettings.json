@@ -3,7 +3,7 @@
     "Container (Dockerfile)": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/home",
       "environmentVariables": {
         "ASPNETCORE_URLS": "https://+:443;http://+:80"
       },
@@ -13,7 +13,7 @@
     "JapaneseLanguageTools (HTTP)": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "http://localhost:5176/swagger",
+      "launchUrl": "http://localhost:5176/home",
       "dotnetRunMessages": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
@@ -23,7 +23,7 @@
     "JapaneseLanguageTools (HTTPS)": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "https://localhost:7176/swagger",
+      "launchUrl": "https://localhost:7176/home",
       "dotnetRunMessages": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
@@ -33,7 +33,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "swagger",
+      "launchUrl": "home",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
