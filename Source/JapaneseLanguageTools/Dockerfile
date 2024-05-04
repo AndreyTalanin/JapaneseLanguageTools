@@ -23,6 +23,7 @@ RUN apt-get install -y nodejs
 WORKDIR "/source"
 
 COPY ["JapaneseLanguageTools.Contracts/JapaneseLanguageTools.Contracts.csproj", "JapaneseLanguageTools.Contracts/"]
+COPY ["JapaneseLanguageTools.Core/JapaneseLanguageTools.Core.csproj", "JapaneseLanguageTools.Core/"]
 COPY ["JapaneseLanguageTools/JapaneseLanguageTools.csproj", "JapaneseLanguageTools/"]
 
 RUN dotnet restore "JapaneseLanguageTools/JapaneseLanguageTools.csproj"

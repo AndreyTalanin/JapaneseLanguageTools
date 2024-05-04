@@ -32,6 +32,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JapaneseLanguageTools.Contracts\JapaneseLanguageTools.Contracts.csproj" />
+    <ProjectReference Include="..\JapaneseLanguageTools.Core\JapaneseLanguageTools.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
