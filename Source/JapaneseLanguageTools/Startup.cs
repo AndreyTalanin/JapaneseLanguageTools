@@ -1,5 +1,7 @@
 using System;
 
+using JapaneseLanguageTools.Extensions;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -42,6 +44,12 @@ public class Startup
 
             options.SupportNonNullableReferenceTypes();
         });
+
+        services.AddSpaStaticFiles(staticFilesOptions =>
+        {
+            // Must match the <SpaPublishRoot /> MSBuild property of the .csproj file.
+            staticFilesOptions.RootPath = "./ReactSpa";
+        });
     }
 
     public void Configure(IApplicationBuilder applicationBuilder, IWebHostEnvironment webHostEnvironment)
@@ -64,6 +72,7 @@ public class Startup
         applicationBuilder.UseHttpsRedirection();
 
         applicationBuilder.UseStaticFiles();
+        applicationBuilder.UseSpaStaticFiles();
 
         applicationBuilder.UseRouting();
 
@@ -73,5 +82,7 @@ public class Startup
         {
             endpointRouteBuilder.MapControllers();
         });
+
+        applicationBuilder.UseSpa();
     }
 }

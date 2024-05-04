@@ -10,6 +10,16 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 ARG BUILD_CONFIGURATION=Release
 
+RUN apt-get update
+RUN apt-get install -y ca-certificates curl gnupg
+RUN apt-get install -y build-essential libjpeg-dev libpng-dev libxi6 libgl1-mesa-glx
+
+RUN mkdir -p /etc/apt/keyrings
+RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+RUN apt-get update
+RUN apt-get install -y nodejs
+
 WORKDIR "/source"
 
 COPY ["JapaneseLanguageTools/JapaneseLanguageTools.csproj", "JapaneseLanguageTools/"]
