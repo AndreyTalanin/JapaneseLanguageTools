@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Applications", "1. Applications", "{D0760DF3-6A6E-4CF6-A202-6818A946B549}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Node.js Applications", "2. Node.js Applications", "{1DBEFB56-70A1-4A16-BDC3-440EFCA94CBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Class Libraries", "3. Class Libraries", "{211EF899-B8FF-4A1C-B057-E1F5334B3396}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Test Libraries", "4. Test Libraries", "{555EA57F-5CC0-40A9-9FA6-5B327F67871A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Solution Items", "5. Solution Items", "{D81DBDD9-9146-495B-9A9A-9CDF298970BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. GitHub", "6. GitHub", "{F8DE664C-2B0D-43B6-9C34-987A87AFD177}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27A3F0AE-9611-4632-A0F9-DBB9173843BF}
+	EndGlobalSection
+EndGlobal
