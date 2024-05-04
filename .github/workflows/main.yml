@@ -1,0 +1,40 @@
+name: Main workflow
+
+on: [push, workflow_dispatch]
+
+permissions: read-all
+
+jobs:
+  build-solution:
+    name: Build the 'JapaneseLanguageTools' solution
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the source code
+        uses: actions/checkout@v3
+      - name: Build the 'JapaneseLanguageTools' ASP.NET Core application project
+        run: |
+          docker build \
+            --file ./Source/JapaneseLanguageTools/Dockerfile \
+            ./Source
+  test-client-application:
+    name: Test the 'JapaneseLanguageTools.ReactSpa' Node.js client application project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the source code
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+      - name: Install the NPM packages
+        run: npm install
+        working-directory: ./Source/JapaneseLanguageTools.ReactSpa
+      - name: Check ESLint rules
+        run: npm run lint
+        working-directory: ./Source/JapaneseLanguageTools.ReactSpa
+      - name: Check source code formatting
+        run: npm run format-check
+        working-directory: ./Source/JapaneseLanguageTools.ReactSpa
+      - name: Test the client application
+        run: npm run test
+        working-directory: ./Source/JapaneseLanguageTools.ReactSpa
