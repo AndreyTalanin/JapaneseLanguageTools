@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Applications", "1. Applications", "{D0760DF3-6A6E-4CF6-A202-6818A946B549}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JapaneseLanguageTools", "JapaneseLanguageTools\JapaneseLanguageTools.csproj", "{5E99D370-B70B-4D67-9491-91277E53AEFC}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Node.js Applications", "2. Node.js Applications", "{1DBEFB56-70A1-4A16-BDC3-440EFCA94CBD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Class Libraries", "3. Class Libraries", "{211EF899-B8FF-4A1C-B057-E1F5334B3396}"
@@ -27,8 +29,17 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E99D370-B70B-4D67-9491-91277E53AEFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E99D370-B70B-4D67-9491-91277E53AEFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E99D370-B70B-4D67-9491-91277E53AEFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E99D370-B70B-4D67-9491-91277E53AEFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E99D370-B70B-4D67-9491-91277E53AEFC} = {D0760DF3-6A6E-4CF6-A202-6818A946B549}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27A3F0AE-9611-4632-A0F9-DBB9173843BF}
