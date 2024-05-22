@@ -31,6 +31,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\JapaneseLanguageTools.Contracts\JapaneseLanguageTools.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <!-- Single Page Application (SPA) Node.js projects -->
     <!-- Will publish the Single Page Application (SPA) to the "wwwroot" folder. -->
     <ProjectReference Include="..\JapaneseLanguageTools.ReactSpa\JapaneseLanguageTools.ReactSpa.esproj" Condition=" '$(UseNodeProjectReferences)' == 'true' ">
