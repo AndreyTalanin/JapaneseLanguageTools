@@ -25,6 +25,7 @@ WORKDIR "/source"
 COPY ["JapaneseLanguageTools.Contracts/JapaneseLanguageTools.Contracts.csproj", "JapaneseLanguageTools.Contracts/"]
 COPY ["JapaneseLanguageTools.Core/JapaneseLanguageTools.Core.csproj", "JapaneseLanguageTools.Core/"]
 COPY ["JapaneseLanguageTools.Data/JapaneseLanguageTools.Data.csproj", "JapaneseLanguageTools.Data/"]
+COPY ["JapaneseLanguageTools.Data.Sqlite/JapaneseLanguageTools.Data.Sqlite.csproj", "JapaneseLanguageTools.Data.Sqlite/"]
 COPY ["JapaneseLanguageTools/JapaneseLanguageTools.csproj", "JapaneseLanguageTools/"]
 
 RUN dotnet restore "JapaneseLanguageTools/JapaneseLanguageTools.csproj"
