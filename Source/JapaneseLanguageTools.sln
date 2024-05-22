@@ -13,6 +13,8 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "JapaneseLanguageTools.React
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Class Libraries", "3. Class Libraries", "{211EF899-B8FF-4A1C-B057-E1F5334B3396}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JapaneseLanguageTools.Contracts", "JapaneseLanguageTools.Contracts\JapaneseLanguageTools.Contracts.csproj", "{D76EA47B-D39E-4091-98AD-2BCF0C3C92A7}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Test Libraries", "4. Test Libraries", "{555EA57F-5CC0-40A9-9FA6-5B327F67871A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Solution Items", "5. Solution Items", "{D81DBDD9-9146-495B-9A9A-9CDF298970BD}"
@@ -42,6 +44,10 @@ Global
 		{C1569800-0CD5-4487-BC77-A2DD62EA086C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1569800-0CD5-4487-BC77-A2DD62EA086C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C1569800-0CD5-4487-BC77-A2DD62EA086C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D76EA47B-D39E-4091-98AD-2BCF0C3C92A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D76EA47B-D39E-4091-98AD-2BCF0C3C92A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D76EA47B-D39E-4091-98AD-2BCF0C3C92A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D76EA47B-D39E-4091-98AD-2BCF0C3C92A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5E99D370-B70B-4D67-9491-91277E53AEFC} = {D0760DF3-6A6E-4CF6-A202-6818A946B549}
 		{C1569800-0CD5-4487-BC77-A2DD62EA086C} = {1DBEFB56-70A1-4A16-BDC3-440EFCA94CBD}
+		{D76EA47B-D39E-4091-98AD-2BCF0C3C92A7} = {211EF899-B8FF-4A1C-B057-E1F5334B3396}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27A3F0AE-9611-4632-A0F9-DBB9173843BF}
