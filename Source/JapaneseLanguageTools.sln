@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JapaneseLanguageTools.Data"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JapaneseLanguageTools.Data.Sqlite", "JapaneseLanguageTools.Data.Sqlite\JapaneseLanguageTools.Data.Sqlite.csproj", "{AFB7D021-B7C1-45A8-96D5-8605F7A7414D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JapaneseLanguageTools.Data.Xml", "JapaneseLanguageTools.Data.Xml\JapaneseLanguageTools.Data.Xml.csproj", "{91729FCF-BF7C-4E60-882D-68905C4F7B05}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Test Libraries", "4. Test Libraries", "{555EA57F-5CC0-40A9-9FA6-5B327F67871A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Solution Items", "5. Solution Items", "{D81DBDD9-9146-495B-9A9A-9CDF298970BD}"
@@ -66,6 +68,10 @@ Global
 		{AFB7D021-B7C1-45A8-96D5-8605F7A7414D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFB7D021-B7C1-45A8-96D5-8605F7A7414D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFB7D021-B7C1-45A8-96D5-8605F7A7414D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91729FCF-BF7C-4E60-882D-68905C4F7B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91729FCF-BF7C-4E60-882D-68905C4F7B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91729FCF-BF7C-4E60-882D-68905C4F7B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91729FCF-BF7C-4E60-882D-68905C4F7B05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +83,7 @@ Global
 		{9E614453-A55C-41AF-AC0E-41982C6805A3} = {211EF899-B8FF-4A1C-B057-E1F5334B3396}
 		{B1532E29-3B6E-439F-B7E7-2649568509CC} = {211EF899-B8FF-4A1C-B057-E1F5334B3396}
 		{AFB7D021-B7C1-45A8-96D5-8605F7A7414D} = {211EF899-B8FF-4A1C-B057-E1F5334B3396}
+		{91729FCF-BF7C-4E60-882D-68905C4F7B05} = {211EF899-B8FF-4A1C-B057-E1F5334B3396}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27A3F0AE-9611-4632-A0F9-DBB9173843BF}

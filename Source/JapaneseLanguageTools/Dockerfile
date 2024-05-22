@@ -26,6 +26,7 @@ COPY ["JapaneseLanguageTools.Contracts/JapaneseLanguageTools.Contracts.csproj", 
 COPY ["JapaneseLanguageTools.Core/JapaneseLanguageTools.Core.csproj", "JapaneseLanguageTools.Core/"]
 COPY ["JapaneseLanguageTools.Data/JapaneseLanguageTools.Data.csproj", "JapaneseLanguageTools.Data/"]
 COPY ["JapaneseLanguageTools.Data.Sqlite/JapaneseLanguageTools.Data.Sqlite.csproj", "JapaneseLanguageTools.Data.Sqlite/"]
+COPY ["JapaneseLanguageTools.Data.Xml/JapaneseLanguageTools.Data.Xml.csproj", "JapaneseLanguageTools.Data.Xml/"]
 COPY ["JapaneseLanguageTools/JapaneseLanguageTools.csproj", "JapaneseLanguageTools/"]
 
 RUN dotnet restore "JapaneseLanguageTools/JapaneseLanguageTools.csproj"

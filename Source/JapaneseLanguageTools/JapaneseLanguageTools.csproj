@@ -35,6 +35,7 @@
     <ProjectReference Include="..\JapaneseLanguageTools.Core\JapaneseLanguageTools.Core.csproj" />
     <ProjectReference Include="..\JapaneseLanguageTools.Data\JapaneseLanguageTools.Data.csproj" />
     <ProjectReference Include="..\JapaneseLanguageTools.Data.Sqlite\JapaneseLanguageTools.Data.Sqlite.csproj" />
+    <ProjectReference Include="..\JapaneseLanguageTools.Data.Xml\JapaneseLanguageTools.Data.Xml.csproj" />
   </ItemGroup>
 
   <ItemGroup>
