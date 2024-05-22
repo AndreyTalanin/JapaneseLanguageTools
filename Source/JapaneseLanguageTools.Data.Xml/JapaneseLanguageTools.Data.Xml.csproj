@@ -8,8 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JapaneseLanguageTools.Contracts\JapaneseLanguageTools.Contracts.csproj" />
-    <ProjectReference Include="..\JapaneseLanguageTools.Data.Xml\JapaneseLanguageTools.Data.Xml.csproj" />
     <ProjectReference Include="..\JapaneseLanguageTools.Data\JapaneseLanguageTools.Data.csproj" />
   </ItemGroup>
 
