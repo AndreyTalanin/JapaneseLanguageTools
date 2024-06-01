@@ -9,6 +9,8 @@ public class Word
     [Key]
     public int Id { get; set; }
 
+    public int? WordGroupId { get; set; }
+
     [StringLength(256)]
     public string Characters { get; set; } = string.Empty;
 
