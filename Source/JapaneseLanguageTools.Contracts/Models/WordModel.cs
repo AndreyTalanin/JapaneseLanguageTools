@@ -6,6 +6,8 @@ public class WordModel
 {
     public int Id { get; set; }
 
+    public int? WordGroupId { get; set; }
+
     public string Characters { get; set; } = string.Empty;
 
     public CharacterTypes Types { get; set; }
