@@ -6,6 +6,8 @@ public class CharacterModel
 {
     public int Id { get; set; }
 
+    public int? CharacterGroupId { get; set; }
+
     public string Symbol { get; set; } = string.Empty;
 
     public CharacterTypes Type { get; set; }
