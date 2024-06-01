@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 using JapaneseLanguageTools.Contracts.Enums;
 
 namespace JapaneseLanguageTools.Contracts.Models;
@@ -26,4 +28,6 @@ public class CharacterModel
 
     /// <remarks>Applicable only for <see cref="CharacterTypes.Kanji" />.</remarks>
     public string? Meaning { get; set; }
+
+    public IList<TagModel> Tags { get; set; } = [];
 }

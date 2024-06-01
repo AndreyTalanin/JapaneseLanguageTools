@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 using JapaneseLanguageTools.Contracts.Enums;
 
 namespace JapaneseLanguageTools.Contracts.Models;
@@ -15,4 +17,6 @@ public class WordModel
     public string Pronunciation { get; set; } = string.Empty;
 
     public string Meaning { get; set; } = string.Empty;
+
+    public IList<TagModel> Tags { get; set; } = [];
 }
