@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 using JapaneseLanguageTools.Contracts.Enums;
@@ -35,4 +36,6 @@ public class Character
     /// <remarks>Applicable only for <see cref="CharacterTypes.Kanji" />.</remarks>
     [StringLength(512)]
     public string? Meaning { get; set; }
+
+    public IList<CharacterTag> Tags { get; set; } = [];
 }
