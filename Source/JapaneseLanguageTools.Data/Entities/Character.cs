@@ -9,6 +9,8 @@ public class Character
     [Key]
     public int Id { get; set; }
 
+    public int? CharacterGroupId { get; set; }
+
     [StringLength(16)]
     public string Symbol { get; set; } = string.Empty;
 
