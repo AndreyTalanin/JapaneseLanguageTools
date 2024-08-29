@@ -6,8 +6,6 @@
     <TestCommand>npm run test</TestCommand>
     <CleanCommand>npm run clean</CleanCommand>
     <PublishCommand>npm run publish</PublishCommand>
-    <JavaScriptTestRoot>source\</JavaScriptTestRoot>
-    <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <!-- Allows the Node.js packages to be restored on build. -->
     <ShouldRunNpmInstall>true</ShouldRunNpmInstall>
