@@ -1,19 +1,71 @@
 using System;
+using System.IO;
 
+using JapaneseLanguageTools.Data.Contexts;
+using JapaneseLanguageTools.Data.Sqlite.Contexts;
 using JapaneseLanguageTools.Extensions;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
 namespace JapaneseLanguageTools;
 
+// Disable the IDE0001 (Simplify name) notification to preserve explicit service types.
+#pragma warning disable IDE0001
+
 public class Startup
 {
+    private readonly IConfiguration m_configuration;
+
+    public Startup(IConfiguration configuration)
+    {
+        m_configuration = configuration;
+    }
+
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddKeyedSingleton<SqliteMainDbContextConnectionString>(SqliteMainDbContextConnectionStrings.MainConnectionString, (serviceProvider, serviceKey) =>
+        {
+            string connectionStringName = SqliteMainDbContextConnectionStrings.MainConnectionString;
+            string? connectionString = m_configuration.GetConnectionString(connectionStringName);
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new InvalidOperationException($"Unable to get the connection string using the \"{connectionStringName}\" configuration key.");
+            }
+
+            SqliteConnectionStringBuilder connectionStringBuilder = new(connectionString);
+            if (connectionStringBuilder.DataSource.Contains('~'))
+            {
+                string homeDirectoryPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+                connectionStringBuilder.DataSource = connectionStringBuilder.DataSource.Replace("~", homeDirectoryPath);
+                connectionString = connectionStringBuilder.ToString();
+            }
+
+            return !File.Exists(connectionStringBuilder.DataSource)
+                ? throw new FileNotFoundException($"The data source file ({connectionStringBuilder.DataSource}) does not exist.")
+                : new SqliteMainDbContextConnectionString(connectionString);
+        });
+
+        services.AddDbContext<MainDbContext, SqliteMainDbContext>((serviceProvider, contextOptions) =>
+        {
+            SqliteMainDbContextConnectionString connectionString =
+                serviceProvider.GetRequiredKeyedService<SqliteMainDbContextConnectionString>(SqliteMainDbContextConnectionStrings.MainConnectionString);
+
+            contextOptions.UseSqlite(connectionString.Value, sqliteOptions =>
+            {
+                sqliteOptions
+                    .MigrationsAssembly(typeof(SqliteMainDbContext).Assembly.FullName)
+                    .MigrationsHistoryTable("MigrationsHistory")
+                    .CommandTimeout(120);
+            });
+        });
+
         services.AddControllers();
 
         services.AddEndpointsApiExplorer();
