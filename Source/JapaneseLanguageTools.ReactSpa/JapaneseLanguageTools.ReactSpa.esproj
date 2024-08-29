@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.128-alpha">
+<Project>
 
   <PropertyGroup>
     <StartupCommand>npm start</StartupCommand>
@@ -12,5 +12,7 @@
     <!-- Ignore the build output folder. -->
     <DefaultItemExcludes>$(DefaultItemExcludes);build\**</DefaultItemExcludes>
   </PropertyGroup>
+
+  <Sdk Name="Microsoft.VisualStudio.JavaScript.Sdk" Version="1.0.1477582" />
 
 </Project>
