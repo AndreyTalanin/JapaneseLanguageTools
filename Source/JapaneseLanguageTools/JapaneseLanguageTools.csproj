@@ -59,7 +59,7 @@
   <Target Name="PublishBuildSpa" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in the production mode. -->
     <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
-    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run publish" />
     <!-- Include the newly-built files in the publish output. -->
     <ItemGroup>
       <SpaBuildFiles Include="$(SpaRoot)build\**\*.*" />
