@@ -12,7 +12,9 @@
     "publish": "tsc && vite build",
     "format": "npx prettier --write \"**/*.{md,html,js,jsx,ts,tsx,css,less,json,yml,yaml}\"",
     "format-check": "npx prettier --check \"**/*.{md,html,js,jsx,ts,tsx,css,less,json,yml,yaml}\"",
-    "lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "clean": "rimraf build",
+    "clean-all": "rimraf build & rimraf node_modules"
   },
   "dependencies": {
     "@ant-design/colors": "^7.0.0",
