@@ -1,7 +1,11 @@
 <Project>
 
   <PropertyGroup>
-    <StartupCommand>npm start</StartupCommand>
+    <BuildCommand>npm run build</BuildCommand>
+    <StartupCommand>npm run start</StartupCommand>
+    <TestCommand>npm run test</TestCommand>
+    <CleanCommand>npm run clean</CleanCommand>
+    <PublishCommand>npm run publish</PublishCommand>
     <JavaScriptTestRoot>source\</JavaScriptTestRoot>
     <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
