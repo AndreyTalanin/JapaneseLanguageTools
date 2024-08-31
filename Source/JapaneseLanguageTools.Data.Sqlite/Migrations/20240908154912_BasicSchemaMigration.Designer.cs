@@ -5,6 +5,7 @@ using JapaneseLanguageTools.Data.Sqlite.Contexts;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -12,9 +13,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JapaneseLanguageTools.Data.Sqlite.Migrations
 {
     [DbContext(typeof(SqliteMainDbContext))]
-    partial class SqliteMainDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240908154912_BasicSchemaMigration")]
+    partial class BasicSchemaMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
