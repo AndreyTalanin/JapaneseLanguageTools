@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 
+using JapaneseLanguageTools.Core.AutoMapper;
 using JapaneseLanguageTools.Data.Contexts;
 using JapaneseLanguageTools.Data.Sqlite.Contexts;
 using JapaneseLanguageTools.Extensions;
@@ -101,6 +102,14 @@ public class Startup
         {
             // Must match the <SpaPublishRoot /> MSBuild property of the .csproj file.
             staticFilesOptions.RootPath = "./ReactSpa";
+        });
+
+        services.AddAutoMapper(options =>
+        {
+            options.AddProfile<TagDatabaseProfile>();
+            options.AddProfile<TagXmlSerializationProfile>();
+            options.AddProfile<ApplicationDictionaryDatabaseProfile>();
+            options.AddProfile<ApplicationDictionaryXmlSerializationProfile>();
         });
     }
 
